@@ -12,17 +12,17 @@
 #include "keys_de_swiss.h"
 
 #define BASE 0
-#define LOWER 1
+#define SYMBOLS 1
 #define RAISE 2
 #define ADJUST 3
 
 / {
 
-   // Activate ADJUST layer by pressing raise and lower
+   // Activate ADJUST layer by pressing raise and symbols
     conditional_layers {
         compatible = "zmk,conditional-layers";
         adjust_layer {
-            if-layers = <LOWER RAISE>;
+            if-layers = <SYMBOLS RAISE>;
             then-layer = <ADJUST>;
         };
     };
@@ -37,33 +37,33 @@
 // |  TAB  |  Q  |  W  |  F   |  P   |  G   |                   |  J   |  L    |  U    |  Z   |   Ö   |   Ü   |
 // | CAPS  |  A  |  R  |  S   |  T   |  D   |                   |  H   |  N    |  E    |  I   |   O   |   Ä   |
 // | SHIFT |  Y  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  K   |  M    |  ,    |  .   |   /   | RCTRL |
-//               | CTRL| ALT  | LOWER| ENTER|  BKSPC |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
+//               | CTRL| ALT  |SYMBLS| ENTER|  BKSPC |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
             bindings = <
-&kp ESC   &kp N1 &kp N2    &kp N3   &kp N4    &kp N5                           &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &kp DEL
+&kp ESC   &kp N1    &kp N2       &kp N3      &kp N4       &kp N5                              &kp N6    &kp N7       &kp N8       &kp N9      &kp N0          &kp DEL
 &kp TAB   &kp DE_Q  &kp DE_W     &kp DE_F    &kp DE_P     &kp DE_G                            &kp DE_J  &kp DE_L     &kp DE_U     &kp DE_Z    &kp DE_O_UMLAUT &kp DE_U_UMLAUT
-&kp CLCK  &kp DE_A  &kp DE_R     &kp DE_S    &kp DE_T     &kp DE_D                            &kp DE_H  &kp DE_N     &kp DE_E     &kp DE_I    &kp DE_O &kp DE_A_UMLAUT
-&kp LSHFT &kp DE_Y  &kp DE_X     &kp DE_C    &kp DE_V     &kp DE_B      &kp C_MUTE &none      &kp DE_K  &kp DE_M     &kp COMMA &kp DOT  &kp FSLH &kp RCTRL
-                 &kp LCTRL &kp LALT &mo LOWER &kp RET    &kp BSPC   &mo RAISE  &kp SPACE  &kp RCTRL &kp RALT  &kp RGUI
+&kp CLCK  &kp DE_A  &kp DE_R     &kp DE_S    &kp DE_T     &kp DE_D                            &kp DE_H  &kp DE_N     &kp DE_E     &kp DE_I    &kp DE_O        &kp DE_A_UMLAUT
+&kp LSHFT &kp DE_Y  &kp DE_X     &kp DE_C    &kp DE_V     &kp DE_B  &kp C_MUTE   &none        &kp DE_K  &kp DE_M     &kp COMMA    &kp DOT     &kp DE_MINUS    &kp RCTRL
+                    &kp LCTRL    &kp LALT    &mo SYMBOLS  &kp RET   &kp BSPC     &mo RAISE    &kp SPACE &kp RCTRL    &kp RALT     &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        lower_layer {
-            label = "lower";
+        symbols {
+            label = "symbols";
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
-// |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  F12  |
-// |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
-// |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
-//               |     |      |      |      |        |  |       |      |       |       |      |
+// |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10  |  F11  |  F12  |
+// |       |  !  |  @  |  (   |  )   |  '   |                   |      |  \    |  ~    |   %   |       |       |
+// |       |  #  |  $  |  {   |  }   |  &   |                   |      |  ¨    |  °    |   ^   |       |       |
+// |       |  =  |  <  |  [   |  ]   |  ?   |        |  |       |      |  `    |  |    |   >   |       |       |
+//               |     |      |      |      |        |  |       |      |       |       |       |
             bindings = <
-&trans    &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp F6    &kp F7   &kp F8          &kp F9    &kp F10   &kp F11
-&kp GRAVE &kp N1    &kp N2    &kp N3      &kp N4    &kp N5                    &kp N6    &kp N7   &kp N8          &kp N9    &kp N0    &kp F12
-&trans    &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                 &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp PIPE
-&trans    &kp EQUAL &kp MINUS &kp KP_PLUS &kp LBRC  &kp RBRC   &trans &trans  &kp LBKT  &kp RBKT &kp SEMI        &kp COLON &kp BSLH  &trans
-                    &trans    &trans      &trans    &trans     &trans &trans  &trans    &trans   &trans          &trans
+&kp F1    &kp F2       &kp F3      &kp F4      &kp F5      &kp F6                         &kp F7    &kp F8        &kp F9       &kp F10      &kp F11 &kp F12
+&trans    &kp DE_EXCL  &kp DE_AT   &kp DE_LPAR &kp DE_RPAR &kp DE_APOS                    &trans    &kp DE_BSLH   &kp DE_TILDE &kp DE_PRCNT &trans  &trans
+&trans    &kp DE_HASH  &kp DE_DLLR &kp DE_LBRC &kp DE_RBRC &kp DE_AMPS                    &trans    &kp DE_UMLAUT &kp DE_DEG   &kp DE_CARET &trans  &kp PIPE
+&trans    &kp DE_EQUAL &kp DE_LT   &kp DE_LBKT &kp DE_RBRC &kp DE_QMARK  &trans   &trans  &trans    &kp DE_GRAVE  &kp DE_PIPE  &kp DE_GT    &trans  &trans
+                       &trans      &trans      &trans      &trans        &trans   &trans  &trans    &trans        &trans       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
