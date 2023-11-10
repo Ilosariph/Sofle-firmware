@@ -34,15 +34,15 @@
             label = "default";
 // ------------------------------------------------------------------------------------------------------------
 // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  DEL  |
-// |  TAB  |  Q  |  W  |  F   |  P   |  G   |                   |  J   |  L    |  U    |  Y   |   P   | BKSPC |
-// | CAPS  |  A  |  R  |  S   |  T   |  D   |                   |  H   |  N    |  E    |  I   |   O   |   '   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  K   |  M    |  ,    |  .   |   /   | RCTRL |
+// |  TAB  |  Q  |  W  |  F   |  P   |  G   |                   |  J   |  L    |  U    |  Z   |   Ö   |   Ü   |
+// | CAPS  |  A  |  R  |  S   |  T   |  D   |                   |  H   |  N    |  E    |  I   |   O   |   Ä   |
+// | SHIFT |  Y  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  K   |  M    |  ,    |  .   |   /   | RCTRL |
 //               | CTRL| ALT  | LOWER| ENTER|  BKSPC |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
             bindings = <
 &kp ESC   &kp N1 &kp N2    &kp N3   &kp N4    &kp N5                           &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &kp DEL
-&kp TAB   &kp Q  &kp W     &kp F    &kp P     &kp G                            &kp J  &kp L     &kp U     &kp Y    &kp P    &kp BSPC
-&kp CLCK  &kp A  &kp R     &kp S    &kp T     &kp D                            &kp H  &kp N     &kp E     &kp I    &kp O &kp SQT
-&kp LSHFT &kp Z  &kp X     &kp C    &kp V     &kp B      &kp C_MUTE &none      &kp K  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RCTRL
+&kp TAB   &kp DE_Q  &kp DE_W     &kp DE_F    &kp DE_P     &kp DE_G                            &kp DE_J  &kp DE_L     &kp DE_U     &kp DE_Z    &kp DE_O_UMLAUT &kp DE_U_UMLAUT
+&kp CLCK  &kp DE_A  &kp DE_R     &kp DE_S    &kp DE_T     &kp DE_D                            &kp DE_H  &kp DE_N     &kp DE_E     &kp DE_I    &kp DE_O &kp DE_A_UMLAUT
+&kp LSHFT &kp DE_Y  &kp DE_X     &kp DE_C    &kp DE_V     &kp DE_B      &kp C_MUTE &none      &kp DE_K  &kp DE_M     &kp COMMA &kp DOT  &kp FSLH &kp RCTRL
                  &kp LCTRL &kp LALT &mo LOWER &kp RET    &kp BSPC   &mo RAISE  &kp SPACE  &kp RCTRL &kp RALT  &kp RGUI
             >;
 
