@@ -60,7 +60,9 @@
                        &kp LGUI   &kp LALT   &kp BACKSPACE             &kp RET    &mo_tog 3 3    &mo_tog 2 2  &kp SPACE  &mo_tog 1 1               &kp RALT   &tog 4
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp PG_DN PG_UP>;
         };
 
         symbols {
