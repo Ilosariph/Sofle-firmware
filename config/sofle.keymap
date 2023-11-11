@@ -29,7 +29,7 @@
         mo_tog: mo_tog {
             compatible = "zmk,behavior-hold-tap";
             label = "MO_TOG";
-            bindings = <&tog>, <&mo>;
+            bindings = <&mo>, <&tog>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
