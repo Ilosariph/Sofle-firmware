@@ -134,7 +134,7 @@
             label = "gaming f keys";
         };
 
-        Layer_switch {
+        LayerSW {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
