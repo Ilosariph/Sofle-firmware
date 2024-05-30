@@ -54,7 +54,7 @@
             bindings = <
 &kp ESC     &mt F1 N1          &mt F2 N2          &mt F3 N3     &mt F4 N4                            &mt F5 N5                                  &mt F6 N6    &mt F7 N7                          &mt F8 N8       &mt F9 N9              &mt F10 N0              &kp DEL
 &kp TAB     &kp DE_Q           &kp DE_W           &kp DE_F      &kp DE_P                             &kp DE_G                                   &kp DE_J     &kp DE_L                           &kp DE_U        &kp DE_Z               &kp DE_O_UMLAUT         &kp DE_U_UMLAUT
-&caps_word  &kp DE_A           &kp DE_R           &kp DE_S      &home_row_shift LSHIFT T             &kp DE_D                                   &kp DE_H     &home_row_shift RSHIFT N           &kp DE_E        &kp DE_I               &kp DE_O                &lt 6 DE_A_UMLAUT
+&caps_word  &kp DE_A           &kp DE_R           &kp DE_S      &kp DE_T                             &kp DE_D                                   &kp DE_H     &kp DE_N                           &kp DE_E        &kp DE_I               &kp DE_O                &lt 6 DE_A_UMLAUT
 &kp LCTRL   &mt LEFT_WIN DE_Y  &mt LEFT_ALT DE_X  &kp DE_C      &kp DE_V                             &kp DE_B       &kp C_MUTE     &to 0        &kp DE_K     &kp DE_M                           &kp COMMA       &mt K_APPLICATION DOT  &mt RIGHT_ALT DE_MINUS  &kp RCTRL
                                &kp DOWN_ARROW     &kp UP_ARROW  &home_row_shift LEFT_SHIFT KP_ENTER  &kp BACKSPACE  &mo_tog 3 3    &mo_tog 2 2  &mo_tog 1 1  &home_row_shift RIGHT_SHIFT SPACE  &kp LEFT_ARROW  &kp RIGHT_ARROW
             >;
