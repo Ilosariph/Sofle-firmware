@@ -54,8 +54,8 @@
             bindings = <
 &kp ESC     &mt F1 N1          &mt F2 N2          &mt F3 N3     &mt F4 N4                            &mt F5 N5                                  &mt F6 N6    &mt F7 N7                          &mt F8 N8       &mt F9 N9              &mt F10 N0              &kp DEL
 &kp TAB     &kp DE_Q           &kp DE_W           &kp DE_F      &kp DE_P                             &kp DE_G                                   &kp DE_J     &kp DE_L                           &kp DE_U        &kp DE_Z               &kp DE_O_UMLAUT         &kp DE_U_UMLAUT
-&caps_word  &kp DE_A           &kp DE_R           &kp DE_S      &home_row_shift LSHIFT T             &kp DE_D                                   &kp DE_H     &home_row_shift RSHIFT N           &kp DE_E        &kp DE_I               &kp DE_O                &kp DE_A_UMLAUT
-&kp LCTRL   &mt LEFT_WIN DE_Y  &mt LEFT_ALT DE_X  &kp DE_C      &kp DE_V                             &kp DE_B       &kp C_MUTE     &none        &kp DE_K     &kp DE_M                           &kp COMMA       &mt K_APPLICATION DOT  &mt RIGHT_ALT DE_MINUS  &kp RCTRL
+&caps_word  &kp DE_A           &kp DE_R           &kp DE_S      &home_row_shift LSHIFT T             &kp DE_D                                   &kp DE_H     &home_row_shift RSHIFT N           &kp DE_E        &kp DE_I               &kp DE_O                &lt 4 DE_A_UMLAUT
+&kp LCTRL   &mt LEFT_WIN DE_Y  &mt LEFT_ALT DE_X  &kp DE_C      &kp DE_V                             &kp DE_B       &kp C_MUTE     &to 0        &kp DE_K     &kp DE_M                           &kp COMMA       &mt K_APPLICATION DOT  &mt RIGHT_ALT DE_MINUS  &kp RCTRL
                                &kp DOWN_ARROW     &kp UP_ARROW  &home_row_shift LEFT_SHIFT KP_ENTER  &kp BACKSPACE  &mo_tog 3 3    &mo_tog 2 2  &mo_tog 1 1  &home_row_shift RIGHT_SHIFT SPACE  &kp LEFT_ARROW  &kp RIGHT_ARROW
             >;
 
@@ -78,7 +78,7 @@
             bindings = <
 &kp F1  &kp F2        &kp F3       &kp F4       &kp F5       &kp F6                          &kp F7  &kp F8         &kp F9        &kp F10       &kp F11  &kp F12
 &trans  &kp DE_EXCL   &kp DE_AT    &kp DE_LPAR  &kp DE_RPAR  &kp DE_APOS                     &trans  &kp DE_BSLH    &kp DE_TILDE  &kp DE_PRCNT  &trans   &trans
-&trans  &kp DE_HASH   &kp DE_DLLR  &kp DE_LBRC  &kp DE_RBRC  &kp DE_AMPS                     &trans  &kp DE_UMLAUT  &kp DE_DEG    &kp DE_CARET  &trans   &kp PIPE
+&trans  &kp DE_HASH   &kp DE_DLLR  &kp DE_LBRC  &kp DE_RBRC  &kp DE_AMPS                     &trans  &kp DE_UMLAUT  &kp DE_DEG    &kp DE_CARET  &trans   &to 0
 &trans  &kp DE_EQUAL  &kp DE_LT    &kp DE_LBKT  &kp DE_RBKT  &kp DE_QMARK  &trans    &trans  &trans  &kp DE_GRAVE   &kp DE_PIPE   &kp DE_GT     &trans   &trans
                       &trans       &trans       &trans       &trans        &trans    &trans  &trans  &trans         &trans        &trans
             >;
@@ -102,7 +102,7 @@
             bindings = <
 &trans  &trans  &trans      &trans    &trans           &trans                    &trans  &trans           &trans    &trans     &trans  &trans
 &trans  &trans  &kp INSERT  &kp HOME  &kp PG_UP        &trans                    &trans  &kp INSERT       &kp HOME  &kp PG_UP  &trans  &trans
-&trans  &trans  &kp DEL     &kp END   &kp PG_DN        &trans                    &trans  &kp DEL          &kp END   &kp PG_DN  &trans  &trans
+&trans  &trans  &kp DEL     &kp END   &kp PG_DN        &trans                    &trans  &kp DEL          &kp END   &kp PG_DN  &trans  &to 0
 &trans  &trans  &trans      &kp UP    &kp PRINTSCREEN  &trans  &trans    &trans  &trans  &kp PRINTSCREEN  &kp UP    &trans     &trans  &trans
                 &kp LEFT    &kp DOWN  &kp RIGHT        &trans  &trans    &trans  &trans  &kp LEFT         &kp DOWN  &kp RIGHT
             >;
@@ -112,11 +112,11 @@
 
         gaming {
             bindings = <
-&kp ESC    &kp N1  &kp N2    &kp N3       &kp N4  &kp N5                       &kp N6     &kp N7  &kp N8     &kp N9   &kp N0           &trans
-&kp TAB    &kp Q   &kp W     &kp E        &kp R   &kp T                        &kp Y      &kp U   &kp I      &kp O    &kp P            &kp DE_U_UMLAUT
-&kp LSHFT  &kp A   &kp S     &kp D        &kp F   &kp G                        &kp H      &kp J   &kp K      &kp L    &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
-&kp LCTRL  &kp Z   &kp X     &kp C        &kp V   &kp B      &trans    &trans  &kp N      &kp M   &kp COMMA  &kp DOT  &trans           &trans
-                   &kp LALT  &mo_tog 5 5  &trans  &kp SPACE  &trans    &trans  &kp ENTER  &trans  &trans     &trans
+&kp ESC    &kp N1  &kp N2    &kp N3       &kp N4  &kp N5                             &kp N6     &kp N7  &kp N8     &kp N9   &kp N0           &trans
+&kp TAB    &kp Q   &kp W     &kp E        &kp R   &kp T                              &kp Y      &kp U   &kp I      &kp O    &kp P            &kp DE_U_UMLAUT
+&kp LSHFT  &kp A   &kp S     &kp D        &kp F   &kp G                              &kp H      &kp J   &kp K      &kp L    &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
+&kp LCTRL  &kp Z   &kp X     &kp C        &kp V   &kp B      &trans          &trans  &kp N      &kp M   &kp COMMA  &kp DOT  &trans           &trans
+                   &kp LALT  &mo_tog 5 5  &trans  &kp SPACE  &kp CAPSLOCK    &trans  &kp ENTER  &trans  &trans     &trans
             >;
 
             label = "gaming";
@@ -132,6 +132,26 @@
             >;
 
             label = "gaming f keys";
+        };
+
+        Layer_switch {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &to 7   &to 4   &to 2   &to 3   &trans  &to 0
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        settings {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &soft_off  &to 0
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans     &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
